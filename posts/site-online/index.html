@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh" data-skin="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -558,6 +558,43 @@
     }
 </style>
 
+<style>
+     
+    html[data-skin="dark"] {
+        --bg: #0b0e13; --surface: #12161d; --fg: #e8edf3; --muted: #98a2ad; --faint: #6b7480;
+        --border: #1f2630; --accent: #5aa9ff; --accent-soft: rgba(90,169,255,.13);
+    }
+    html[data-skin="dark"] .proj-card:hover { border-color: #2a3441; box-shadow: 0 16px 38px rgba(0,0,0,.5); }
+    html[data-skin="dark"] ::selection { background: #5aa9ff; color: #0b0e13; }
+    html[data-skin="dark"] .noise { opacity: .07; }
+
+    .hero { position: relative; }
+    .aurora { position: absolute; inset: -40px 0 0 0; pointer-events: none; z-index: 0; }
+    .blob { position: absolute; border-radius: 50%; filter: blur(90px); }
+    .blob.b1 { width: 420px; height: 420px; top: -140px; right: -100px;
+        background: radial-gradient(circle, rgba(90,169,255,.55), transparent 65%);
+        animation: drift1 16s ease-in-out infinite alternate; }
+    .blob.b2 { width: 380px; height: 380px; top: 260px; left: -140px;
+        background: radial-gradient(circle, rgba(64,224,180,.4), transparent 65%);
+        animation: drift2 21s ease-in-out infinite alternate; }
+    .blob.b3 { width: 300px; height: 300px; bottom: -180px; right: 30%;
+        background: radial-gradient(circle, rgba(160,110,255,.35), transparent 65%);
+        animation: drift1 26s ease-in-out infinite alternate-reverse; }
+    html[data-skin="light"] .blob { opacity: .35; }
+    @keyframes drift1 { to { transform: translate(-70px, 60px) scale(1.18); } }
+    @keyframes drift2 { to { transform: translate(80px, -50px) scale(1.12); } }
+    .hero > *:not(.aurora) { position: relative; z-index: 1; }
+
+     
+    .skin-switch { position: fixed; right: 16px; bottom: 16px; z-index: 80; display: flex;
+        border: 1px solid var(--border); border-radius: 999px; overflow: hidden; background: var(--surface);
+        box-shadow: 0 6px 20px rgba(0,0,0,.12); }
+    .skin-switch button { font: inherit; font-size: 12px; padding: 7px 14px; border: 0;
+        background: transparent; color: var(--muted); cursor: pointer; }
+    .skin-switch button.on { background: var(--fg); color: var(--bg); }
+    @media (prefers-reduced-motion: reduce) { .blob { animation: none; } }
+</style>
+
 </head>
 <body>
     
@@ -612,6 +649,10 @@
     </a>
 </nav>
 
+    <div class="skin-switch" role="group" aria-label="配色">
+        <button type="button" id="skin-dark" class="on" onclick="setSkin('dark')">暗夜</button>
+        <button type="button" id="skin-light" onclick="setSkin('light')">白昼</button>
+    </div>
     <div class="main">
         <div class="container">
             
@@ -638,6 +679,19 @@
     </div>
     <div class="noise" aria-hidden="true"></div>
 <script>
+     
+    function setSkin(s) {
+        document.documentElement.setAttribute('data-skin', s);
+        try { localStorage.setItem('skin', s); } catch (e) {}
+        var d = document.getElementById('skin-dark'), l = document.getElementById('skin-light');
+        if (d && l) { d.classList.toggle('on', s === 'dark'); l.classList.toggle('on', s === 'light'); }
+    }
+    (function () {
+        var saved = 'dark';
+        try { saved = localStorage.getItem('skin') || 'dark'; } catch (e) {}
+        setSkin(saved);
+    })();
+
     (function () {
          
         var burger = document.getElementById('burger');
