@@ -490,6 +490,75 @@
     }
 </style>
 
+<style>
+     
+     
+    .noise { position: fixed; inset: 0; z-index: 90; pointer-events: none; opacity: .05;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E"); }
+
+     
+    .hero { padding: 110px 0 64px; }
+    .hero-name { display: none; }
+    .kinetic { font-weight: 700; font-size: clamp(40px, 7.6vw, 96px); line-height: 1.04; letter-spacing: -0.03em; margin: 18px 0 22px; }
+    .kinetic .line { display: block; overflow: hidden; }
+    .kinetic .line > span { display: block; transform: translateY(112%); animation: rise .9s cubic-bezier(.19,1,.22,1) forwards; }
+    .kinetic .line:nth-child(2) > span { animation-delay: .12s; }
+    .kinetic .line:nth-child(3) > span { animation-delay: .24s; }
+    .kinetic .outline { color: transparent; -webkit-text-stroke: 2px var(--fg); }
+    .kinetic .blue { color: var(--accent); }
+    @keyframes rise { to { transform: translateY(0); } }
+
+    .hero-bio { max-width: 560px; color: var(--muted); font-size: 1.02rem; opacity: 0; animation: fadeUp .8s .45s cubic-bezier(.19,1,.22,1) forwards; }
+    .hero-actions { opacity: 0; animation: fadeUp .8s .6s cubic-bezier(.19,1,.22,1) forwards; }
+    .hero-places { opacity: 0; animation: fadeUp .8s .72s cubic-bezier(.19,1,.22,1) forwards; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+
+     
+    .marquee { border-block: 1px solid var(--border); padding: 14px 0; overflow: hidden; white-space: nowrap; margin: 8px 0 8px; }
+    .marquee-track { display: inline-flex; gap: 0; animation: slide 22s linear infinite; will-change: transform; }
+    .marquee:hover .marquee-track { animation-play-state: paused; }
+    .marquee-track span { font-weight: 600; font-size: 15px; letter-spacing: .06em; text-transform: uppercase; padding: 0 22px; }
+    .marquee-track i { font-style: normal; color: var(--accent); font-weight: 700; }
+    @keyframes slide { to { transform: translateX(-50%); } }
+
+     
+    .rv { opacity: 0; transform: translateY(26px); transition: opacity .8s cubic-bezier(.19,1,.22,1), transform .8s cubic-bezier(.19,1,.22,1); }
+    .rv.in { opacity: 1; transform: translateY(0); }
+    .rv.d1 { transition-delay: .08s; } .rv.d2 { transition-delay: .16s; } .rv.d3 { transition-delay: .24s; }
+
+     
+    .bento { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .bento .proj-card.big { grid-row: span 2; display: flex; flex-direction: column; }
+    .bento .proj-card.big .proj-name { font-size: 1.35rem; }
+    .bento .proj-card.big .proj-desc { font-size: .95rem; }
+    .proj-card { transition: transform .45s cubic-bezier(.19,1,.22,1), border-color .45s, box-shadow .45s; }
+    .proj-card:hover { transform: translateY(-4px); border-color: #cfd6dd; box-shadow: 0 14px 34px rgba(15,23,32,.08); }
+    .proj-card:hover .proj-arrow { transform: translate(3px, -3px); color: var(--accent); }
+    .proj-arrow { display: inline-block; transition: transform .35s cubic-bezier(.19,1,.22,1), color .35s; }
+
+     
+    .cta-title { font-size: clamp(34px, 6.4vw, 78px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; }
+    .cta-title .fill { display: inline-block; position: relative; color: var(--accent); }
+    .cta-box { padding-bottom: 90px; }
+    .btn-primary:hover { background: #08528c; transform: translateY(-2px); }
+    .btn { transition: transform .35s cubic-bezier(.19,1,.22,1), background .35s, border-color .35s; }
+    .btn-ghost:hover { border-color: var(--fg); transform: translateY(-2px); }
+
+    @media (max-width: 860px) {
+        .kinetic { font-size: clamp(38px, 11vw, 60px); }
+        .hero { padding: 64px 0 44px; }
+        .bento { grid-template-columns: 1fr; }
+        .bento .proj-card.big { grid-row: auto; }
+        .marquee-track { animation-duration: 16s; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .kinetic .line > span { animation: none; transform: none; }
+        .hero-bio, .hero-actions, .hero-places { opacity: 1; animation: none; }
+        .marquee-track { animation: none; }
+        .rv { opacity: 1; transform: none; transition: none; }
+    }
+</style>
+
 </head>
 <body>
     
@@ -550,8 +619,11 @@
 
 <section class="hero">
     <p class="hero-greeting">你好，我是</p>
-    <h1 class="hero-name">LLL<em>-</em>404</h1>
-    <p class="hero-statement">构建工具、自动化与游戏 —— 用代码把想法跑起来。</p>
+    <h1 class="kinetic">
+        <span class="line"><span>构建工具、</span></span>
+        <span class="line"><span class="outline">自动化</span><span class="blue">与游戏</span></span>
+        <span class="line"><span>—— 用代码把想法跑起来</span></span>
+    </h1>
     <p class="hero-bio">在 GitHub 上写 MCP 工具链、浏览器自动化 Agent 和 Godot 小游戏原型。这里聚合我的仓库与构建笔记，不写别的东西。</p>
     <p class="hero-places"><b>工具 · 自动化 · 游戏</b></p>
     <div class="hero-actions">
@@ -561,14 +633,24 @@
 </section>
 
 
+<div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+        
+        <span>MCP 工具链 <i>✳</i></span><span>浏览器自动化 <i>✳</i></span><span>GODOT 游戏 <i>✳</i></span><span>命令行工具 <i>✳</i></span><span>AGENT 框架 <i>✳</i></span><span>类型安全 <i>✳</i></span>
+        <span>MCP 工具链 <i>✳</i></span><span>浏览器自动化 <i>✳</i></span><span>GODOT 游戏 <i>✳</i></span><span>命令行工具 <i>✳</i></span><span>AGENT 框架 <i>✳</i></span><span>类型安全 <i>✳</i></span>
+    </div>
+</div>
+
+
 <section class="section" id="portfolio">
-    <span class="eyebrow">01 · 作品集</span>
-    <h2 class="sec-title">精选项目
+    <span class="eyebrow rv">01 · 作品集</span>
+    <h2 class="sec-title rv">精选项目
         <a class="sec-more" href="/projects/">全部 →</a>
     </h2>
-    <div class="proj-grid">
+    <div class="bento">
         
-        <a class="proj-card" href="/site-preview/projects/adb-mcp-server/">
+        
+        <a class="proj-card rv big" href="/site-preview/projects/adb-mcp-server/">
             <div class="proj-top">
                 <span class="proj-name">adb-mcp-server</span>
                 <span class="proj-cat">工具</span>
@@ -582,7 +664,7 @@
             </div>
         </a>
         
-        <a class="proj-card" href="/site-preview/projects/browser-agent/">
+        <a class="proj-card rv d1" href="/site-preview/projects/browser-agent/">
             <div class="proj-top">
                 <span class="proj-name">browser-agent</span>
                 <span class="proj-cat">框架</span>
@@ -596,7 +678,7 @@
             </div>
         </a>
         
-        <a class="proj-card" href="/site-preview/projects/trae-works/">
+        <a class="proj-card rv d2" href="/site-preview/projects/trae-works/">
             <div class="proj-top">
                 <span class="proj-name">trae-works</span>
                 <span class="proj-cat">合集</span>
@@ -610,7 +692,7 @@
             </div>
         </a>
         
-        <a class="proj-card" href="/site-preview/projects/long-image-to-video/">
+        <a class="proj-card rv d1" href="/site-preview/projects/long-image-to-video/">
             <div class="proj-top">
                 <span class="proj-name">long-image-to-video</span>
                 <span class="proj-cat">工具</span>
@@ -624,20 +706,34 @@
             </div>
         </a>
         
+        <a class="proj-card rv " href="/site-preview/projects/warden/">
+            <div class="proj-top">
+                <span class="proj-name">warden</span>
+                <span class="proj-cat">游戏原型</span>
+            </div>
+            <p class="proj-desc">类魔兽争霸 PVE 对称双核心攻防：单英雄操控 &#43; 红警式建造塔防 &#43; 战线选择肉鸽。私有仓库。</p>
+            <div class="proj-foot">
+                <div class="chips">
+                    <span class="chip">Godot</span><span class="chip">C#</span><span class="chip">RTS</span>
+                </div>
+                <span class="proj-arrow">↗</span>
+            </div>
+        </a>
+        
     </div>
 </section>
 
 
-
-
 <section class="section" id="blog">
-    <span class="eyebrow">02 · 博客</span>
-    <h2 class="sec-title">近期文章
+    <span class="eyebrow rv">02 · 博客</span>
+    <h2 class="sec-title rv">近期文章
         <a class="sec-more" href="/posts/">全部 →</a>
     </h2>
+    
+    
     <div class="post-list">
         
-        <a class="post-row" href="/site-preview/posts/site-online/">
+        <a class="post-row rv" href="/site-preview/posts/site-online/">
             <time class="post-date">2026.10.02</time>
             <div>
                 <div class="post-title">站点上线</div>
@@ -647,47 +743,47 @@
         </a>
         
     </div>
+    
 </section>
 
 
-
-
-
 <section class="section" id="journey">
-    <span class="eyebrow">03 · 足迹</span>
-    <h2 class="sec-title">做过的方向
+    <span class="eyebrow rv">03 · 足迹</span>
+    <h2 class="sec-title rv">做过的方向
         <a class="sec-more" href="/resume/">全部 →</a>
     </h2>
+    
+    
     <div class="timeline">
         
-        <div class="tl-item">
+        <div class="tl-item rv">
             <div class="tl-date">2026.09</div>
             <div class="tl-title"><a href="/site-preview/resume/mcp-tools/">MCP 工具开发</a></div>
             <div class="tl-desc">word-mcp-server、adb-mcp-server：让 AI 助手直接操作文档与安卓设备。</div>
         </div>
         
-        <div class="tl-item">
+        <div class="tl-item rv">
             <div class="tl-date">2026.09</div>
             <div class="tl-title"><a href="/site-preview/resume/game-prototypes/">Godot 游戏原型</a></div>
             <div class="tl-desc">warden：RTS 攻防肉鸽；tapline：60-90 秒一局的反应小游戏。</div>
         </div>
         
-        <div class="tl-item">
+        <div class="tl-item rv">
             <div class="tl-date">2026.07</div>
             <div class="tl-title"><a href="/site-preview/resume/automation/">自动化与站点</a></div>
             <div class="tl-desc">browser-agent 浏览器自动化框架、long-image-to-video 转视频工具、Hugo 站点。</div>
         </div>
         
     </div>
+    
 </section>
 
 
-
 <section class="section cta-box" id="contact">
-    <span class="eyebrow">04 · 联系</span>
-    <h2 class="cta-title">有想法，欢迎来聊。</h2>
-    <p class="cta-desc">代码全在 GitHub 上公开，issue 和 PR 都欢迎。</p>
-    <div class="hero-actions">
+    <span class="eyebrow rv">04 · 联系</span>
+    <h2 class="cta-title rv"><span class="fill">有想法，欢迎来聊。</span></h2>
+    <p class="cta-desc rv d1">代码全在 GitHub 上公开，issue 和 PR 都欢迎。</p>
+    <div class="hero-actions rv d2" style="opacity:1;animation:none">
         <a class="btn btn-primary" href="https://github.com/LLL-404" target="_blank" rel="noopener">GitHub <span class="arr">↗</span></a>
         <a class="btn btn-ghost" href="/contact/">联系</a>
     </div>
@@ -703,8 +799,10 @@
 
         </div>
     </div>
-    <script>
+    <div class="noise" aria-hidden="true"></div>
+<script>
     (function () {
+         
         var burger = document.getElementById('burger');
         var mnav = document.getElementById('mnav');
         if (burger && mnav) {
@@ -713,6 +811,18 @@
                 burger.setAttribute('aria-expanded', open ? 'true' : 'false');
             });
         }
+         
+        var items = document.querySelectorAll('.rv');
+        if (!('IntersectionObserver' in window)) {
+            items.forEach(function (el) { el.classList.add('in'); });
+            return;
+        }
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+        items.forEach(function (el) { io.observe(el); });
     })();
 </script>
 
