@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on LLL-404</title>
+    <link>https://lll-404.github.io/site-preview/projects/</link>
+    <description>Recent content in Projects on LLL-404</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 30 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lll-404.github.io/site-preview/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>adb-mcp-server</title>
+      <link>https://lll-404.github.io/site-preview/projects/adb-mcp-server/</link>
+      <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://lll-404.github.io/site-preview/projects/adb-mcp-server/</guid>
+      <description>让 AI 助手通过标准 MCP 接口操控安卓设备的 TypeScript 服务器。装进任何支持 MCP 的客户端后，AI 就能装卸应用、模拟点击滑动、截屏和执行 shell 命令。</description>
+    </item>
+    <item>
+      <title>browser-agent</title>
+      <link>https://lll-404.github.io/site-preview/projects/browser-agent/</link>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://lll-404.github.io/site-preview/projects/browser-agent/</guid>
+      <description>把“让 AI 操作浏览器”做成框架：统一的 MCP Server 与 CLI 入口，多模式扩展机制，可接入任意自动化流程。</description>
+    </item>
+    <item>
+      <title>trae-works</title>
+      <link>https://lll-404.github.io/site-preview/projects/trae-works/</link>
+      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://lll-404.github.io/site-preview/projects/trae-works/</guid>
+      <description>用 TRAE SOLO 构建的作品合集仓：signbridge 手语翻译、3D 自走棋、GitInsight、Web-call，各自独立成子目录。</description>
+    </item>
+    <item>
+      <title>long-image-to-video</title>
+      <link>https://lll-404.github.io/site-preview/projects/long-image-to-video/</link>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://lll-404.github.io/site-preview/projects/long-image-to-video/</guid>
+      <description>输入一张长图，输出一段匀速滚动的视频，适合分享聊天记录、长文与数据大屏截图。</description>
+    </item>
+    <item>
+      <title>warden</title>
+      <link>https://lll-404.github.io/site-preview/projects/warden/</link>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://lll-404.github.io/site-preview/projects/warden/</guid>
+      <description>类魔兽争霸 PVE 对称双核心攻防肉鸽：单英雄微操 + 红警式建造塔防 + 战线选择。私有仓库，尚在开发中。</description>
+    </item>
+    <item>
+      <title>tapline</title>
+      <link>https://lll-404.github.io/site-preview/projects/tapline/</link>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://lll-404.github.io/site-preview/projects/tapline/</guid>
+      <description>单输入、一局 60-90 秒的反应类小游戏原型，目标是跑通 TapTap 广告变现闭环。私有仓库。</description>
+    </item>
+  </channel>
+</rss>

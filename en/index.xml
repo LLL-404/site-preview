@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on LLL-404</title>
+    <link>https://lll-404.github.io/site-preview/en/</link>
+    <description>Recent content in Home on LLL-404</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 02 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lll-404.github.io/site-preview/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MCP Tool Development</title>
+      <link>https://lll-404.github.io/site-preview/en/resume/mcp-tools/</link>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://lll-404.github.io/site-preview/en/resume/mcp-tools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>adb-mcp-server</title>
+      <link>https://lll-404.github.io/site-preview/en/projects/adb-mcp-server/</link>
+      <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://lll-404.github.io/site-preview/en/projects/adb-mcp-server/</guid>
+      <description>A TypeScript MCP server that lets AI assistants control Android devices: install/uninstall apps, simulate taps and swipes, take screenshots, and run shell commands.</description>
+    </item>
+    <item>
+      <title>browser-agent</title>
+      <link>https://lll-404.github.io/site-preview/en/projects/browser-agent/</link>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://lll-404.github.io/site-preview/en/projects/browser-agent/</guid>
+      <description>&amp;ldquo;Let AI drive the browser&amp;rdquo; as a framework: unified MCP Server and CLI entry points with a multi-mode extension system.</description>
+    </item>
+    <item>
+      <title>Godot Game Prototypes</title>
+      <link>https://lll-404.github.io/site-preview/en/resume/game-prototypes/</link>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://lll-404.github.io/site-preview/en/resume/game-prototypes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>trae-works</title>
+      <link>https://lll-404.github.io/site-preview/en/projects/trae-works/</link>
+      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://lll-404.github.io/site-preview/en/projects/trae-works/</guid>
+      <description>A monorepo of projects built with TRAE SOLO: signbridge (sign-language translation), a 3D auto-battler, GitInsight, and Web-call — each isolated in its own subdirectory.</description>
+    </item>
+    <item>
+      <title>Automation &amp; Sites</title>
+      <link>https://lll-404.github.io/site-preview/en/resume/automation/</link>
+      <pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://lll-404.github.io/site-preview/en/resume/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>long-image-to-video</title>
+      <link>https://lll-404.github.io/site-preview/en/projects/long-image-to-video/</link>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://lll-404.github.io/site-preview/en/projects/long-image-to-video/</guid>
+      <description>Feed it one tall image, get back a smoothly scrolling video — handy for sharing chat logs, long articles, and dashboard screenshots.</description>
+    </item>
+    <item>
+      <title>warden</title>
+      <link>https://lll-404.github.io/site-preview/en/projects/warden/</link>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://lll-404.github.io/site-preview/en/projects/warden/</guid>
+      <description>A WarCraft-inspired PVE roguelike with symmetric dual cores: single-hero micro, Red-Alert-style building defense, and lane choices. Private repo, in development.</description>
+    </item>
+    <item>
+      <title>tapline</title>
+      <link>https://lll-404.github.io/site-preview/en/projects/tapline/</link>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://lll-404.github.io/site-preview/en/projects/tapline/</guid>
+      <description>A single-input reaction game prototype with 60-90 second rounds, aiming to validate the TapTap ad monetization loop. Private repo.</description>
+    </item>
+    <item>
+      <title>Hello, Site</title>
+      <link>https://lll-404.github.io/site-preview/en/posts/hello-site/</link>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://lll-404.github.io/site-preview/en/posts/hello-site/</guid>
+      <description>The site is live. It aggregates my open-source repos; build notes on MCP tools, browser automation, and Godot game prototypes will land here.&#xA;For code, head to GitHub.</description>
+    </item>
+  </channel>
+</rss>
