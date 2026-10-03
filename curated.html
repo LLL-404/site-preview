@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>替你逛完的精选 · 第二轮</title>
+<style>
+:root{--bg:#fcfcfc;--fg:#14181d;--muted:#6e7781;--border:#e7eaee;--accent:#0061aa;--soft:#eef6fc}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--fg);line-height:1.7;font-size:15px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.hero{padding:64px 0 36px;border-bottom:1px solid var(--border)}
+.kicker{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:10px}
+h1{font-size:32px;line-height:1.25;font-weight:700}
+.lead{color:var(--muted);margin-top:12px;max-width:680px}
+.back{display:inline-block;margin-bottom:16px;color:var(--muted);text-decoration:none;font-size:13px}
+.back:hover{color:var(--accent)}
+section{padding:44px 0;border-bottom:1px solid var(--border)}
+h2{font-size:22px;font-weight:700;margin-bottom:6px}
+.sub{color:var(--muted);font-size:14px;margin-bottom:22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.card{background:#fff;border:1px solid var(--border);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.card img{width:100%;height:auto;display:block;border-bottom:1px solid var(--border)}
+.card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card .name{font-weight:600;font-size:16px}
+.card .desc{color:var(--muted);font-size:13.5px}
+.card .cost{font-size:12px;color:var(--accent);background:var(--soft);border-radius:6px;padding:2px 8px;align-self:flex-start}
+.card a.go{font-size:13px;color:var(--accent);text-decoration:none;margin-top:2px}
+.card a.go:hover{text-decoration:underline}
+.card .pick{font-size:11px;color:#fff;background:#14181d;border-radius:6px;padding:2px 8px;align-self:flex-start;margin-bottom:2px}
+footer{padding:28px 0;display:flex;justify-content:space-between;color:var(--muted);font-size:13px}
+footer a{color:var(--accent);text-decoration:none}
+@media(max-width:640px){.hero{padding:44px 0 28px}h1{font-size:26px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <a class="back" href="/site-preview/">← 返回新版网站预览</a>
+    <p class="kicker">Curated · Round 2</p>
+    <h1>替你逛完的精选 · 10 个候选</h1>
+    <p class="lead">逛了 HTML5UP 全站 18 套、Hugo 官方库作品集专区、Colorlib、Framer 市场、One Page Love，筛出这 10 个。标注了每个的落地成本：直用 = 免费静态包直接部署；直换 = Hugo 主题直接换进你现有仓库；参考 = 只借鉴视觉。</p>
+  </div>
+
+  <section>
+    <h2>我的前三推荐</h2>
+    <div class="grid">
+      <div class="card"><img src="/site-preview/browse/hugo_profile.png" alt="Hugo Profile">
+        <div class="body"><span class="pick">推荐 1 · 结构与 1chooo 同款</span><span class="name">Hugo Profile（1086★）</span>
+        <p class="desc">居中大字开场 "I build things for the web"，项目/经历/技能分区完整，正是你现在预览站的同款骨架。</p>
+        <span class="cost">直换 · Hugo 主题换进现有仓库，内容零迁移</span>
+        <a class="go" href="https://themes.gohugo.io/themes/hugo-profile/" target="_blank" rel="noopener">打开主题页 ↗</a></div>
+      </div>
+      <div class="card"><img src="/site-preview/browse/h_dimension.png" alt="Dimension">
+        <div class="body"><span class="pick">推荐 2 · 视觉最惊艳</span><span class="name">HTML5UP Dimension</span>
+        <p class="desc">全屏大图+居中细线构图，一打开就是"作品集"，手机端同样惊艳。缺点：重视觉轻文字，博客感弱。</p>
+        <span class="cost">直用 · 免费静态包（CC 许可），套你的内容即可</span>
+        <a class="go" href="https://html5up.net/dimension" target="_blank" rel="noopener">打开模板页 ↗</a></div>
+      </div>
+      <div class="card"><img src="/site-preview/browse/h_massively.png" alt="Massively">
+        <div class="body"><span class="pick">推荐 3 · 作品+博客混合</span><span class="name">HTML5UP Massively</span>
+        <p class="desc">杂志大字编辑风+大图头版，文章流和项目卡兼得——和你"作品集+博客"的内容结构最搭。</p>
+        <span class="cost">直用 · 免费静态包（CC 许可），套你的内容即可</span>
+        <a class="go" href="https://html5up.net/massively" target="_blank" rel="noopener">打开模板页 ↗</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>HTML5 UP 其余三套</h2>
+    <p class="sub">全部免费、CC 许可、纯静态可直接部署；由 AJ 设计，质感统一在线上。</p>
+    <div class="grid">
+      <div class="card"><img src="/site-preview/browse/h_phantom.png" alt="Phantom">
+        <div class="body"><span class="name">Phantom</span><p class="desc">白底图标卡片墙，清爽度最高，适合把仓库当图标阵摆。</p><span class="cost">直用</span><a class="go" href="https://html5up.net/phantom" target="_blank" rel="noopener">打开 ↗</a></div>
+      </div>
+      <div class="card"><img src="/site-preview/browse/h_solidstate.png" alt="Solid State">
+        <div class="body"><span class="name">Solid State</span><p class="desc">深蓝+斜切几何块，科技感最重，深色党可选。</p><span class="cost">直用</span><a class="go" href="https://html5up.net/solid-state" target="_blank" rel="noopener">打开 ↗</a></div>
+      </div>
+      <div class="card"><img src="/site-preview/browse/h_ethereal.png" alt="Ethereal">
+        <div class="body"><span class="name">Ethereal</span><p class="desc">大图瀑布+渐变横幅，视觉冲击最强，也最挑内容——需要好看的头图。</p><span class="cost">直用</span><a class="go" href="https://html5up.net/ethereal" target="_blank" rel="noopener">打开 ↗</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Hugo 主题库补充 + 市场参考</h2>
+    <div class="grid">
+      <div class="card"><img src="/site-preview/browse/hugo_devportfolio.png" alt="Developer Portfolio">
+        <div class="body"><span class="name">Developer Portfolio（78★）</span><p class="desc">"Hi! I'm Sam" 开场+技能图标区，结构干净但样式偏老。</p><span class="cost">直换</span><a class="go" href="https://themes.gohugo.io/themes/hugo-developer-portfolio/" target="_blank" rel="noopener">打开主题页 ↗</a></div>
+      </div>
+      <div class="card"><img src="/site-preview/browse/colorlib_portfolio.png" alt="Colorlib Portfolio">
+        <div class="body"><span class="name">Colorlib · Portfolio</span><p class="desc">深底大图作品集模板，工业感偏重。</p><span class="cost">直用</span><a class="go" href="https://colorlib.com/wp/template/portfolio/" target="_blank" rel="noopener">打开 ↗</a></div>
+      </div>
+      <div class="card"><img src="/site-preview/browse/market_framer.png" alt="Framer">
+        <div class="body"><span class="name">Framer 作品集市场（参考）</span><p class="desc">2025-26 最流行的作品集视觉集中地，当审美参考天花板。</p><span class="cost">参考 · Framer 托管不能上 GitHub Pages</span><a class="go" href="https://www.framer.com/marketplace/templates/categories/portfolio/" target="_blank" rel="noopener">打开 ↗</a></div>
+      </div>
+      <div class="card"><img src="/site-preview/browse/opl_gallery.png" alt="One Page Love">
+        <div class="body"><span class="name">One Page Love 画廊（参考）</span><p class="desc">单页站专精画廊，翻真实案例找构图灵感。</p><span class="cost">参考</span><a class="go" href="https://onepagelove.com" target="_blank" rel="noopener">打开 ↗</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer><span>© LLL-404 · 临时预览</span><span><a href="/site-preview/gallery.html">素材库导航</a> · <a href="/site-preview/">网站预览</a></span></footer>
+</div>
+</body>
+</html>
