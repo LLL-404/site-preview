@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on LLL-404</title>
+    <link>https://lll-404.github.io/site-preview/v2/posts/</link>
+    <description>Recent content in Posts on LLL-404</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 02 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lll-404.github.io/site-preview/v2/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>站点上线</title>
+      <link>https://lll-404.github.io/site-preview/v2/posts/site-online/</link>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://lll-404.github.io/site-preview/v2/posts/site-online/</guid>
+      <description>站点上线了。这里聚合我的开源仓库，之后会写一些构建笔记：MCP 工具、浏览器自动化、Godot 游戏原型。&#xA;想看代码直接去 GitHub。</description>
+    </item>
+  </channel>
+</rss>

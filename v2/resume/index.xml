@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>足迹 on LLL-404</title>
+    <link>https://lll-404.github.io/site-preview/v2/resume/</link>
+    <description>Recent content in 足迹 on LLL-404</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 15 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lll-404.github.io/site-preview/v2/resume/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MCP 工具开发</title>
+      <link>https://lll-404.github.io/site-preview/v2/resume/mcp-tools/</link>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://lll-404.github.io/site-preview/v2/resume/mcp-tools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Godot 游戏原型</title>
+      <link>https://lll-404.github.io/site-preview/v2/resume/game-prototypes/</link>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://lll-404.github.io/site-preview/v2/resume/game-prototypes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>自动化与站点</title>
+      <link>https://lll-404.github.io/site-preview/v2/resume/automation/</link>
+      <pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://lll-404.github.io/site-preview/v2/resume/automation/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

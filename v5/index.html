@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LLL-404 · BRUTAL!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Noto+Sans+SC:wght@400;700;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+<style>
+:root { --ink:#000; --paper:#fffdf5; --y:#ffd93d; --pk:#ff90e8; --cy:#7ff3ff; --gn:#b8f53d; --sans:'Noto Sans SC',sans-serif; --disp:'Archivo Black','Noto Sans SC',sans-serif; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.65;font-size:15px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--ink);color:var(--y)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+.back{position:fixed;bottom:14px;left:14px;z-index:60;font-family:var(--disp);font-size:.68rem;background:var(--cy);border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);padding:5px 12px}
+/* 顶条 */
+.top{background:var(--ink);color:var(--paper);padding:10px 0;overflow:hidden;white-space:nowrap}
+.mq{display:inline-flex;animation:sl 18s linear infinite;font-family:var(--disp);font-size:.8rem;letter-spacing:.06em}
+@keyframes sl{to{transform:translateX(-50%)}}
+.mq span{padding:0 18px}
+/* 头部 */
+.hero{padding:80px 0 60px;position:relative}
+.badge{position:absolute;top:64px;right:30px;background:var(--pk);border:3px solid var(--ink);box-shadow:7px 7px 0 var(--ink);font-family:var(--disp);font-size:.78rem;padding:12px 16px;transform:rotate(7deg)}
+.hero h1{font-family:var(--disp);font-size:clamp(46px,9.4vw,118px);line-height:.98;letter-spacing:-.01em;text-transform:uppercase}
+.hero h1 .hl{display:inline-block;background:var(--y);border:3px solid var(--ink);box-shadow:8px 8px 0 var(--ink);padding:2px 18px;transform:rotate(-1.2deg)}
+.hero h1 .ul{background:linear-gradient(transparent 62%, var(--cy) 62%)}
+.hero p{max-width:620px;margin-top:30px;font-size:1rem;font-weight:500}
+.hero .acts{margin-top:34px;display:flex;gap:16px;flex-wrap:wrap}
+.bb{display:inline-block;font-family:var(--disp);font-size:.9rem;padding:14px 28px;border:3px solid var(--ink);box-shadow:7px 7px 0 var(--ink);transition:all .15s ease;background:var(--paper)}
+.bb:hover{transform:translate(-2px,-2px);box-shadow:10px 10px 0 var(--ink)}
+.bb:active{transform:translate(4px,4px);box-shadow:2px 2px 0 var(--ink)}
+.bb.y{background:var(--y)} .bb.g{background:var(--gn)} .bb.c{background:var(--cy)}
+/* 区块 */
+.sec{padding:70px 0 20px}
+.lab{display:inline-block;font-family:var(--disp);font-size:1.4rem;background:var(--ink);color:var(--paper);padding:8px 18px;transform:rotate(-1deg);margin-bottom:34px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.card{border:3px solid var(--ink);box-shadow:9px 9px 0 var(--ink);background:var(--paper);transition:all .18s ease;display:flex;flex-direction:column}
+.card:hover{transform:translate(-3px,-3px);box-shadow:13px 13px 0 var(--ink)}
+.card .head{border-bottom:3px solid var(--ink);padding:14px 18px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.card:nth-child(1) .head{background:var(--y)} .card:nth-child(2) .head{background:var(--pk)}
+.card:nth-child(3) .head{background:var(--cy)} .card:nth-child(4) .head{background:var(--gn)}
+.card:nth-child(5) .head{background:var(--pk)}
+.card .nm{font-family:var(--disp);font-size:1.02rem;text-transform:lowercase}
+.card .tag{font-family:var(--disp);font-size:.6rem;border:2px solid var(--ink);background:var(--paper);padding:3px 9px;white-space:nowrap}
+.card .bd{padding:18px;flex:1}
+.card .bd p{font-weight:500;font-size:.92rem}
+.card .ft{border-top:3px solid var(--ink);padding:12px 18px;display:flex;justify-content:space-between;align-items:center;font-family:var(--disp);font-size:.72rem}
+.card .ft .go{transition:transform .18s ease}
+.card:hover .ft .go{transform:translate(4px,-4px)}
+/* 足迹 */
+.jrn{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.jc{border:3px solid var(--ink);box-shadow:8px 8px 0 var(--ink);padding:22px;background:var(--paper);transition:all .18s ease}
+.jc:hover{transform:translate(-2px,-2px);box-shadow:11px 11px 0 var(--ink)}
+.jc:nth-child(1){background:var(--cy)} .jc:nth-child(2){background:var(--y)} .jc:nth-child(3){background:var(--pk)}
+.jc .t{font-family:var(--disp);font-size:1rem;margin-bottom:8px}
+.jc .d{font-weight:500;font-size:.88rem}
+/* CTA */
+.cta{padding:100px 0 90px;text-align:center}
+.cta .box{display:inline-block;background:var(--y);border:4px solid var(--ink);box-shadow:12px 12px 0 var(--ink);padding:50px 44px;transform:rotate(-.6deg)}
+.cta h2{font-family:var(--disp);font-size:clamp(28px,5.4vw,56px);line-height:1.15;text-transform:uppercase}
+.cta p{font-weight:700;margin:14px 0 26px}
+@media(max-width:860px){
+  .badge{display:none}
+  .grid{grid-template-columns:1fr}
+  .jrn{grid-template-columns:1fr}
+  .hero{padding:56px 0 40px}
+  .sec{padding:50px 0 10px}
+}
+@media(prefers-reduced-motion:reduce){.mq{animation:none}}
+</style>
+</head>
+<body>
+<a class="back" href="../">← BACK</a>
+<div class="top"><div class="mq">
+    <span>★ MCP TOOLCHAIN ★ GODOT GAMES ★ BROWSER AUTOMATION ★ CLI TOOLS ★ OPEN SOURCE ★</span>
+    <span>★ MCP TOOLCHAIN ★ GODOT GAMES ★ BROWSER AUTOMATION ★ CLI TOOLS ★ OPEN SOURCE ★</span>
+</div></div>
+
+<section class="hero"><div class="wrap">
+    <div class="badge">EST.2026<br>济南 · CHINA</div>
+    <h1>构建工具、<br><span class="hl">自动化</span> 与<span class="ul">游戏</span>。<br>跑起来才算数。</h1>
+    <p>我是 LLL-404。白天做环境检测采样，夜里写代码：MCP 工具链、浏览器自动化、Godot 游戏原型。信奉小而完整。</p>
+    <div class="acts">
+        <a class="bb y" href="#work">看作品集 →</a>
+        <a class="bb" href="https://github.com/LLL-404" target="_blank" rel="noopener">GITHUB ↗</a>
+    </div>
+</div></section>
+
+<section class="sec" id="work"><div class="wrap">
+    <span class="lab">作品集 · WORK</span>
+    <div class="grid">
+        <a class="card" href="https://github.com/LLL-404" target="_blank" rel="noopener">
+            <div class="head"><span class="nm">browser-agent</span><span class="tag">AI AGENT</span></div>
+            <div class="bd"><p>浏览器自动化 AI Agent 框架：MCP Server + CLI + 多模式扩展。让 AI 助手接管浏览器里那些重复的活儿。</p></div>
+            <div class="ft"><span>PYTHON · 自动化</span><span class="go">↗↗</span></div>
+        </a>
+        <a class="card" href="https://github.com/LLL-404" target="_blank" rel="noopener">
+            <div class="head"><span class="nm">adb-mcp-server</span><span class="tag">MCP</span></div>
+            <div class="bd"><p>通过 MCP 协议控制安卓设备：应用管理、输入模拟、截屏、shell 一应俱全。</p></div>
+            <div class="ft"><span>TYPESCRIPT · ANDROID</span><span class="go">↗↗</span></div>
+        </a>
+        <a class="card" href="https://github.com/LLL-404" target="_blank" rel="noopener">
+            <div class="head"><span class="nm">warden</span><span class="tag">GAME</span></div>
+            <div class="bd"><p>类魔兽争霸 PVE 对称双核心攻防：单英雄操控 + 红警式建造塔防 + 战线选择肉鸽。</p></div>
+            <div class="ft"><span>GODOT · C# · RTS</span><span class="go">↗↗</span></div>
+        </a>
+        <a class="card" href="https://github.com/LLL-404" target="_blank" rel="noopener">
+            <div class="head"><span class="nm">tapline</span><span class="tag">GAME</span></div>
+            <div class="bd"><p>60-90 秒一局的单输入反应小游戏，探索 TapTap 广告变现。</p></div>
+            <div class="ft"><span>GODOT · C#</span><span class="go">↗↗</span></div>
+        </a>
+        <a class="card" href="https://github.com/LLL-404" target="_blank" rel="noopener">
+            <div class="head"><span class="nm">trae-works</span><span class="tag">WORKS</span></div>
+            <div class="bd"><p>TRAE SOLO 作品合集：手语翻译、3D 自走棋、GitInsight 等。</p></div>
+            <div class="ft"><span>TYPESCRIPT</span><span class="go">↗↗</span></div>
+        </a>
+    </div>
+</div></section>
+
+<section class="sec" id="journey"><div class="wrap">
+    <span class="lab">足迹 · JOURNEY</span>
+    <div class="jrn">
+        <div class="jc"><p class="t">MCP 工具开发</p><p class="d">word-mcp-server、adb-mcp-server：让 AI 助手直接操作文档与安卓设备。</p></div>
+        <div class="jc"><p class="t">Godot 游戏原型</p><p class="d">warden：RTS 攻防肉鸽；tapline：60-90 秒一局的反应小游戏。</p></div>
+        <div class="jc"><p class="t">自动化与站点</p><p class="d">browser-agent 浏览器自动化框架、long-image-to-video 转视频工具、Hugo 站点。</p></div>
+    </div>
+</div></section>
+
+<section class="cta" id="contact"><div class="wrap">
+    <div class="box">
+        <h2>有想法，<br>欢迎来聊！</h2>
+        <p>开源合作 · 工具共建 · Godot &amp; MCP</p>
+        <a class="bb g" href="https://github.com/LLL-404" target="_blank" rel="noopener">GITHUB @LLL-404 ↗</a>
+    </div>
+</div></section>
+
+<div class="wrap" style="padding-bottom:50px"><div style="border-top:3px solid var(--ink);padding-top:18px;display:flex;justify-content:space-between;font-family:var(--disp);font-size:.68rem;flex-wrap:wrap;gap:8px">
+    <span>© 2026 LLL-404</span><span>HUGO 驱动 · <a href="../">返回选款</a></span>
+</div></div>
+</body>
+</html>

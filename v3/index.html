@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LLL-404 · 作品与手记</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root { --paper:#f6f3ec; --ink:#1a1712; --muted:#6b6257; --faint:#a29a8d; --line:#d8d2c4; --acc:#8a2f1d; --sans:'Noto Sans SC',sans-serif; --serif:'Noto Serif SC',serif; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.9;font-size:15px;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--acc);color:var(--paper)}
+.wrap{max-width:960px;margin:0 auto;padding:0 28px}
+.back{position:fixed;bottom:14px;left:14px;z-index:60;font-size:.7rem;color:var(--faint);background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-family:var(--serif)}
+/* 报头 */
+.mast{border-bottom:3px double var(--ink);padding:26px 0 14px;display:flex;justify-content:space-between;align-items:baseline}
+.mast .t{font-family:var(--serif);font-weight:900;font-size:1.05rem;letter-spacing:.3em}
+.mast .d{font-family:var(--serif);font-size:.72rem;color:var(--muted);letter-spacing:.2em}
+/* 刊首 */
+.hero{padding:90px 0 70px;text-align:left;position:relative}
+.vol{font-family:var(--serif);font-size:.75rem;color:var(--acc);letter-spacing:.5em;margin-bottom:26px}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(52px,10vw,124px);line-height:1.08;letter-spacing:.02em}
+.hero .sub{margin-top:30px;display:flex;gap:34px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:22px}
+.hero .sub div{max-width:280px}
+.hero .sub b{font-family:var(--serif);display:block;font-size:.95rem;margin-bottom:4px}
+.hero .sub p{color:var(--muted);font-size:.82rem;line-height:1.8}
+/* 目次 */
+.toc{padding:50px 0 30px;border-top:3px double var(--ink)}
+.toc .lab{font-family:var(--serif);font-weight:700;font-size:.8rem;letter-spacing:.4em;color:var(--acc);margin-bottom:26px}
+.art{display:grid;grid-template-columns:86px 1fr auto;gap:26px;align-items:baseline;padding:30px 0;border-bottom:1px solid var(--line);transition:background .3s}
+.art:first-of-type{border-top:1px solid var(--line)}
+.art:hover{background:rgba(138,47,29,.035)}
+.art .no{font-family:var(--serif);font-size:2rem;font-weight:400;color:var(--faint);font-style:italic}
+.art:hover .no{color:var(--acc)}
+.art h3{font-family:var(--serif);font-weight:700;font-size:1.5rem;margin-bottom:6px;letter-spacing:.01em}
+.art p{color:var(--muted);font-size:.9rem;max-width:560px}
+.art .meta{text-align:right;font-family:var(--serif);font-size:.72rem;color:var(--faint);letter-spacing:.14em;line-height:2}
+/* 手记 */
+.notes{padding:60px 0;border-top:1px solid var(--line)}
+.notes .lab{font-family:var(--serif);font-weight:700;font-size:.8rem;letter-spacing:.4em;color:var(--acc);margin-bottom:26px}
+.note-row{display:flex;justify-content:space-between;align-items:baseline;padding:16px 0;border-bottom:1px dotted var(--line)}
+.note-row:hover .ttl{color:var(--acc)}
+.note-row .ttl{font-family:var(--serif);font-weight:600;font-size:1.05rem;transition:color .3s}
+.note-row .dt{font-family:var(--serif);font-size:.75rem;color:var(--faint)}
+/* 版权页 */
+.colophon{padding:80px 0 70px;border-top:3px double var(--ink);text-align:center}
+.colophon .big{font-family:var(--serif);font-weight:900;font-size:clamp(30px,5.4vw,56px);line-height:1.4}
+.colophon .big em{font-style:normal;color:var(--acc);border-bottom:3px solid var(--acc)}
+.colophon p{color:var(--muted);margin:18px 0 30px;font-size:.9rem}
+.colophon .lnk{font-family:var(--serif);font-size:.9rem;border:1px solid var(--ink);padding:10px 30px;display:inline-block;transition:all .3s}
+.colophon .lnk:hover{background:var(--ink);color:var(--paper)}
+footer{border-top:1px solid var(--line);padding:20px 0 60px;font-family:var(--serif);font-size:.72rem;color:var(--faint);display:flex;justify-content:space-between;letter-spacing:.15em;flex-wrap:wrap;gap:8px}
+@media(max-width:760px){
+  .art{grid-template-columns:1fr;gap:8px}
+  .art .no{font-size:1.3rem}
+  .art .meta{text-align:left}
+  .hero{padding:60px 0 40px}
+  .hero .sub{gap:18px}
+}
+</style>
+</head>
+<body>
+<a class="back" href="../">← 返回选款</a>
+<div class="wrap">
+    <header class="mast"><span class="t">LLL-404</span><span class="d">作品与手记 · 二〇二六</span></header>
+
+    <section class="hero">
+        <p class="vol">卷首 · 开发者作品集</p>
+        <h1>构建工具、<br>自动化与游戏。</h1>
+        <div class="sub">
+            <div><b>其人</b><p>白天环境检测采样，夜里写代码。济南，开源署名 LLL-404。</p></div>
+            <div><b>其事</b><p>MCP 工具链、浏览器自动化、Godot 游戏原型，六个可运行的作品。</p></div>
+            <div><b>其言</b><p>小而完整，大于大而空。能跑起来的才算数。</p></div>
+        </div>
+    </section>
+
+    <section class="toc">
+        <p class="lab">目 次 · 作 品</p>
+        <a class="art" href="https://github.com/LLL-404" target="_blank" rel="noopener">
+            <span class="no">No.1</span>
+            <div><h3>browser-agent</h3><p>浏览器自动化 AI Agent 框架：MCP Server + CLI + 多模式扩展。让 AI 助手接管浏览器里那些重复的活儿。</p></div>
+            <span class="meta">Python<br>AI AGENT · 自动化</span>
+        </a>
+        <a class="art" href="https://github.com/LLL-404" target="_blank" rel="noopener">
+            <span class="no">No.2</span>
+            <div><h3>adb-mcp-server</h3><p>通过 MCP 协议控制安卓设备：应用管理、输入模拟、截屏、shell 一应俱全。</p></div>
+            <span class="meta">TypeScript<br>MCP · ANDROID</span>
+        </a>
+        <a class="art" href="https://github.com/LLL-404" target="_blank" rel="noopener">
+            <span class="no">No.3</span>
+            <div><h3>warden</h3><p>类魔兽争霸 PVE 对称双核心攻防：单英雄操控 + 红警式建造塔防 + 战线选择肉鸽。</p></div>
+            <span class="meta">GODOT · C#<br>RTS</span>
+        </a>
+        <a class="art" href="https://github.com/LLL-404" target="_blank" rel="noopener">
+            <span class="no">No.4</span>
+            <div><h3>tapline</h3><p>60-90 秒一局的单输入反应小游戏，探索 TapTap 广告变现。</p></div>
+            <span class="meta">GODOT · C#<br>小游戏</span>
+        </a>
+        <a class="art" href="https://github.com/LLL-404" target="_blank" rel="noopener">
+            <span class="no">No.5</span>
+            <div><h3>trae-works</h3><p>TRAE SOLO 作品合集：手语翻译、3D 自走棋、GitInsight 等。</p></div>
+            <span class="meta">TypeScript<br>作品集</span>
+        </a>
+        <a class="art" href="https://github.com/LLL-404" target="_blank" rel="noopener">
+            <span class="no">No.6</span>
+            <div><h3>long-image-to-video</h3><p>把长截图变成平滑滚动 MP4 的命令行工具。</p></div>
+            <span class="meta">PYTHON<br>多媒体</span>
+        </a>
+    </section>
+
+    <section class="notes">
+        <p class="lab">手 记 · 足 迹</p>
+        <a class="note-row" href="https://github.com/LLL-404" target="_blank" rel="noopener"><span class="ttl">MCP 工具开发 — word-mcp-server、adb-mcp-server</span><span class="dt">方向之一</span></a>
+        <a class="note-row" href="https://github.com/LLL-404" target="_blank" rel="noopener"><span class="ttl">Godot 游戏原型 — warden、tapline</span><span class="dt">方向之二</span></a>
+        <a class="note-row" href="https://github.com/LLL-404" target="_blank" rel="noopener"><span class="ttl">自动化与站点 — browser-agent、long-image-to-video</span><span class="dt">方向之三</span></a>
+    </section>
+
+    <section class="colophon" id="contact">
+        <p class="big">有想法，<em>欢迎来聊。</em></p>
+        <p>开源合作、工具共建，或者就聊聊 Godot 与 MCP。</p>
+        <a class="lnk" href="https://github.com/LLL-404" target="_blank" rel="noopener">GitHub @LLL-404</a>
+    </section>
+
+    <footer><span>LLL-404 版权所有</span><span>铅字排印 · Hugo 驱动</span></footer>
+</div>
+</body>
+</html>
